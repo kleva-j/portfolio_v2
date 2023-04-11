@@ -101,16 +101,16 @@ jobs:
     # Manual deployment
     # See https://devblogs.microsoft.com/devops/i-need-manual-approvers-for-github-actions-and-i-got-them-now/
     environment:
-      name: pchmn.github.io/vite-react-ts-ghactions-template
-      url: https://pchmn.github.io/vite-react-ts-ghactions-template/
+      name: development
+      url: https://github.com/kleva-j/portfolio_v2
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           token: ${{ env.GITHUB_TOKEN }}
 
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v3
         with:
-          node-version: "16"
+          node-version: "18"
 
       # Download dist artifacts
       - uses: actions/download-artifact@v2
@@ -118,11 +118,11 @@ jobs:
           name: dist
           path: dist/
 
-      # Deploy dist folder to gh pages
-      - name: DEPLOY
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ env.GITHUB_TOKEN }}
-          publish_dir: ./dist
-          user_name: ${{ secrets.GIT_AUTHOR_NAME }}
-          user_email: ${{ secrets.GIT_AUTHOR_EMAIL }}
+      # # Deploy dist folder to gh pages
+      # - name: DEPLOY
+      #   uses: peaceiris/actions-gh-pages@v3
+      #   with:
+      #     github_token: ${{ env.GITHUB_TOKEN }}
+      #     publish_dir: ./dist
+      #     user_name: ${{ secrets.GIT_AUTHOR_NAME }}
+      #     user_email: ${{ secrets.GIT_AUTHOR_EMAIL }}
