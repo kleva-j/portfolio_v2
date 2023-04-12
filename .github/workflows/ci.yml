@@ -26,28 +26,37 @@ jobs:
     name: Build & Test
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout repo
+        uses: actions/checkout@v3
         with:
           token: ${{ env.GITHUB_TOKEN }}
 
-      - uses: actions/setup-node@v2
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2.2.4
+
+      - name: Setup Node 18
+        uses: actions/setup-node@v3
         with:
-          node-version: "16"
+          node-version: 18
+
+      # Get store directory
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        run: |
+          echo "pnpm_cache_dir=$(pnpm store path)" >> $GITHUB_OUTPUT
 
       # pnpm cache
-      - uses: actions/cache@v2
+      - name: Setup pnpm cache
+        uses: actions/cache@v3
         with:
-          path: ~/.pnpm-store
-          key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
-            ${{ runner.os }}-
+            ${{ runner.os }}-pnpm-store-
 
       # Install
-      - name: INSTALL
-        uses: pnpm/action-setup@v2.0.1
-        with:
-          version: 6.22.2
-          run_install: true
+      - name: Install deps (with cache)
+        run: pnpm install
 
       # Build
       - name: BUILD
@@ -85,8 +94,8 @@ jobs:
           name: coverage
 
       # Update coverage file to codecov
-      - name: CODECOV
-        uses: codecov/codecov-action@v1
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v3
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           files: lcov.info
