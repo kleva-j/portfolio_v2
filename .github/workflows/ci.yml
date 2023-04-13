@@ -18,6 +18,9 @@ on:
 
 env:
   GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+  VITE_APP_EMAILJS_SERVICE_ID: ${{ secrets.VITE_APP_EMAILJS_SERVICE_ID }}
+  VITE_APP_EMAILJS_TEMPLATE_ID: ${{ secrets.VITE_APP_EMAILJS_TEMPLATE_ID }}
+  VITE_APP_EMAILJS_PUBLIC_KEY: ${{ secrets.VITE_APP_EMAILJS_PUBLIC_KEY }}
 
 jobs:
 
@@ -56,7 +59,7 @@ jobs:
 
       # Install
       - name: Install deps (with cache)
-        run: pnpm install
+        run: pnpm install --no-frozen-lockfile
 
       # Build
       - name: BUILD
@@ -67,13 +70,13 @@ jobs:
         run: pnpm test:ci
 
       # Upload dist artifacts
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         with:
           name: dist
           path: dist/
 
       # Upload coverage artifacts
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         with:
           name: coverage
           path: coverage/lcov.info

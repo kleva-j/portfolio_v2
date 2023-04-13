@@ -17,6 +17,7 @@
   "author": "kleva-j",
   "license": "MIT",
   "homepage": "https://github.com/kleva-j/portfolio_v2",
+  "packageManager": "pnpm@8.2.0",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
