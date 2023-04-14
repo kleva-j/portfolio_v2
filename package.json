@@ -4,7 +4,7 @@
   "description": "portfolio app version 2",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kleva-j/portfolio@v2.git"
+    "url": "git+https://github.com/kleva-j/portfolio_v2.git"
   },
   "keywords": [
     "react",

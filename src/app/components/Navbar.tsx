@@ -33,7 +33,7 @@ const Navbar = () => {
           {navLinks.map(({ id, title }) => (
             <li key={id} className="w-full flex">
               <a
-                href={`/portfolio@v2/#${id}` as any}
+                href={`/portfolio_v2/#${id}` as any}
                 className={`flex items-center gap-2 hover:text-white text-[16px] font-medium cursor-pointer ${
                   isActive === title ? 'text-white' : 'text-secondary'
                 }`}
@@ -64,7 +64,7 @@ const Navbar = () => {
               {navLinks.map(({ id, title }) => (
                 <li key={id} className="w-full flex">
                   <Link
-                    to={`/portfolio@v2/${id}` as any}
+                    to={`/portfolio_v2/${id}` as any}
                     tabIndex={0}
                     className={`font-poppins font-medium cursor-pointer text-[16px] ${
                       isActive === title ? 'text-white' : 'text-secondary'

@@ -8,7 +8,7 @@
 
 </div>
 
-[View Demo here](https://kleva-j.github.io/portfolio@v2/)
+[View Demo here](https://kleva-j.github.io/portfolio_v2/)
 
 ## Features
 
