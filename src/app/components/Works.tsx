@@ -61,7 +61,8 @@ const Works = () => {
         briefly described with links to code repositories and live demos in it. It reflects my ability so solve complex
         problems, work with different technologies, and manage projects effectively.
       </motion.p>
-      <div className="mt-20 flex flex-wrap gap-10">
+      <p className="my-4 text-xl text-center">To be updated</p>
+      <div className="mt-20 flex flex-wrap gap-10 blur-md">
         {projects.map((project) => (
           <ProjectCard key={project.name} {...project} />
         ))}

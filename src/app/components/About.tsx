@@ -38,10 +38,14 @@ const About = () => {
         variants={fadeIn('up', 'tween', 0.1, 0.1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        I&apos;m a skilled software developer with experience in TypeScript and JavaScript, and expertise in frameworks
+        {/* I&apos;m a skilled software developer with experience in TypeScript and JavaScript, and expertise in frameworks
         like React, Node.js, and Three.js. I&apos;m a quick learner and collaborate closely with clients to create
         efficient, scalable and user-friendly solution that solve real-world problems. Let&apos;s work together to bring
-        your ideas to life!
+        your ideas to life! */}
+        I&apos;m an experienced software developer with a passion for building robust and scalable applications.
+        Proficient in multiple programming languages and frameworks, with a keen eye for detail and a drive for
+        continuous learning. I am excited to leverage skills in problem-solving and innovation to contribute to
+        cutting-edge software solutions.
       </motion.p>
       <div className="mt-20 flex flex-wrap gap-10">
         {services.map((service, index) => (

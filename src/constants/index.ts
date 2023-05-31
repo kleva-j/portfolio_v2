@@ -1,7 +1,7 @@
 import {
   backend,
   carrent,
-  creator,
+  // creator,
   css,
   docker,
   figma,
@@ -42,20 +42,16 @@ export const navLinks = [
 
 const services = [
   {
-    title: 'Web Developer',
+    title: 'Frontend Developer',
     icon: web
+  },
+  {
+    title: 'Full-Stack Developer',
+    icon: backend
   },
   {
     title: 'React Native Developer',
     icon: mobile
-  },
-  {
-    title: 'Backend Developer',
-    icon: backend
-  },
-  {
-    title: 'Content Creator',
-    icon: creator
   }
 ];
 
@@ -116,21 +112,46 @@ const technologies = [
 
 const experiences = [
   {
-    title: 'React.js Developer',
-    company_name: 'Starbucks',
+    title: 'Full-Stack Software Developer',
+    company_name: 'Aduro Creative ltd',
     icon: starbucks,
     iconBg: '#383E56',
     date: 'March 2020 - April 2021',
     points: [
-      'Developing and maintaining web applications using React.js and other related technologies.',
-      'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-      'Implementing responsive design and ensuring cross-browser compatibility.',
-      'Participating in code reviews and providing constructive feedback to other developers.'
+      'Worked in an Agile-driven environment to effectively maintain project timelines and utilize available resources.',
+      'Designed and maintained streamlined, reusable and reliable code for use within the internal product repositories.',
+      'Designed and updated layouts to meet usability and performance requirements such as fast-loading pages.',
+      'Drafted design timeline specifications to create accurate project deadlines and set budgetary metrics.'
     ]
   },
   {
-    title: 'React Native Developer',
-    company_name: 'Tesla',
+    title: 'Front-End Angular Developer',
+    company_name: 'LawPavilon',
+    icon: starbucks,
+    iconBg: '#383E56',
+    date: 'March 2020 - April 2021',
+    points: [
+      'Worked on a robust Solutions application developed with the Angular Framework where I:',
+      'Re-architected major parts of the app to enhance the performance and load time of the application.',
+      'Developed reusable presentational and functional components used throughout the application.',
+      'Achieved lazy-loading of multiple components, separation of heavy computations to a worker instance.'
+    ]
+  },
+  {
+    title: 'Full-Stack Software Engineer',
+    company_name: 'Tete',
+    icon: tesla,
+    iconBg: '#E6DEDD',
+    date: 'Jan 2021 - Feb 2022',
+    points: [
+      'Collaborated with teammates to develop highly efficient full-stack applications with React.js and Redux on the front-end, Node.js on the back-end and a React Native mobile application, where I:',
+      'Re-architected major parts of the front-end and back-end application to be more flexible, extensible and testable while implementing numerous features on these applications.',
+      'Facilitated the team’s adoption of the Scrum methodology by educating about and onboarding the practice and serving as Scrum master.'
+    ]
+  },
+  {
+    title: 'Full-Stack Software Engineer',
+    company_name: 'Hourly',
     icon: tesla,
     iconBg: '#E6DEDD',
     date: 'Jan 2021 - Feb 2022',
@@ -142,29 +163,28 @@ const experiences = [
     ]
   },
   {
-    title: 'Web Developer',
-    company_name: 'Shopify',
+    title: 'Software Engineer',
+    company_name: 'Andela',
     icon: shopify,
     iconBg: '#383E56',
     date: 'Jan 2022 - Jan 2023',
     points: [
-      'Developing and maintaining web applications using React.js and other related technologies.',
-      'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-      'Implementing responsive design and ensuring cross-browser compatibility.',
-      'Participating in code reviews and providing constructive feedback to other developers.'
+      'Worked with clients’ application and product development teams, implementing software solutions using both web and mobile technologies',
+      'Assisted in designing the architecture of solutions using third-party application program interfaces, services and software libraries.',
+      'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.'
     ]
   },
   {
-    title: 'Full stack Developer',
-    company_name: 'Meta',
+    title: 'Front-End Developer',
+    company_name: 'Tulaa',
     icon: meta,
     iconBg: '#E6DEDD',
     date: 'Jan 2023 - Present',
     points: [
-      'Developing and maintaining web applications using React.js and other related technologies.',
-      'Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.',
-      'Implementing responsive design and ensuring cross-browser compatibility.',
-      'Participating in code reviews and providing constructive feedback to other developers.'
+      'Worked on the front-end part of a Customer Relations Management application with over 25,000+ users developed using Angular 8.',
+      'Worked on several features which include optimized data representation and visualization of multiple distributions of data on the application.',
+      'Implemented lazy-loading of multiple microservices and components which reduced the load time of the application by 30%.',
+      'Offered mentorship to the newer developers on the team and organized coaching sessions as the team lead.'
     ]
   }
 ];
